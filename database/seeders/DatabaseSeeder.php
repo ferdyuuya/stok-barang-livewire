@@ -22,8 +22,13 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'test@example.net',
             'password' => 'password',
         ]);
+
+        $this->call([
+            BarangSeeder::class,
+            StokLogsSeeder::class,
+        ]);   
     }
 }

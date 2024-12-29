@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('barang_id')->constrained()->cascadeOnDelete();
             // $table->foreignId'project_id')->constrained()->cascadeOnDelete();
-            $table->string('change');            
+            $table->integer('quantity');
+            $table->string('action');            
             $table->string('description');
             $table->timestamps();
         });

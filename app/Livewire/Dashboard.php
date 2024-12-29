@@ -13,7 +13,6 @@ class Dashboard extends Component
 
     public function mount()
     {
-        // Initialize the public properties
         $this->totalBarang = Barang::count();
         $this->recentUpdates = StokLogs::latest()->take(5)->get();
     }
